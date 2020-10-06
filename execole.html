@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOTES CLASSES</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+    <!-- <script src="main.js"></script>  -->
+</head>
+
+<body>
+
+    <div id="app">
+      <h1>ATTRIBUTION DES NOTES
+        {{ niveau }}
+      </h1>
+      <p>
+          <h2>{{ presentation1() }}<br>
+               Notation : {{ notation1 }}</h2>
+            <button v-on:click="augmente1">Augmente</button>
+            <button v-on:click="diminue1">Diminue</button> 
+          </p>     
+ <!-- <classe-primaire></classe-primaire>  -->
+ <p>
+  <h2>{{ presentation2() }}<br>
+       Notation : {{ notation2 }}</h2>
+    <button v-on:click="augmente2">Augmente</button>
+    <button v-on:click="diminue2">Diminue</button> 
+  </p> 
+  <p>
+    <h2>{{ presentation3() }}<br>
+         Notation : {{ notation3 }}</h2>
+      <button v-on:click="augmente3">Augmente</button>
+      <button v-on:click="diminue3">Diminue</button> 
+    </p> 
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+         niveau : 'classe de CP',
+          eleve : ['Daniel', 'Eric', 'Carole'],
+          notation1 : 0,
+          notation2 : 0,
+          notation3 : 0
+         },
+        methods: {
+          presentation1: function(){
+             return this.eleve[0] 
+          },
+          augmente1: function(){
+             this.notation1++;
+                          }, 
+          diminue1: function(){
+             this.notation1--;
+             },
+          presentation2: function(){
+             return this.eleve[1]
+             },
+          augmente2: function(){
+          this.notation2++;
+        },
+          diminue2: function(){
+             this.notation2--;
+             },
+          presentation3: function(){
+             return this.eleve[2]
+             },
+          augmente3: function(){
+          this.notation3++;
+        },
+          diminue3: function(){
+             this.notation3--;
+             },
+        }
+    })
+</script>
+
+</body>
+</html>
