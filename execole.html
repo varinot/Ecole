@@ -9,8 +9,19 @@
 
 <body>
     <div id="app">
+<!-- saisie du mot de passe du directeur -->
+      <p>
+         <label for="mdp">Mot de passe du directeur</label> :
+         <input type="password" name="mdp" id="mdp" required />
+         <span id="aideMdp"></span>
+        </p>
+       
+
       <h1>ATTRIBUTION DES NOTES<br>
          Classe de
+  
+      <p>
+
           <!-- choix du niveau dans une liste de classes -->
          <p>
            <label for="niveau">Niveau :</label>
@@ -24,14 +35,7 @@
          </p>
        <!-- {{ niveau }} -->
       </h1> 
-       <!-- saisie du mot de passe du directeur -->
-      <p>
-         <label for="mdp">Mot de passe du directeur</label> :
-         <input type="password" name="mdp" id="mdp" required />
-         <span id="aideMdp"></span>
-        </p>
-       
-      <p>
+     
           <h2>{{ presentation1() }}<br>
                Notation : {{ notation1 }}</h2>
             <button v-on:click="augmente1">Augmente</button>

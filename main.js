@@ -5,7 +5,9 @@
           eleve : ['Daniel', 'Eric', 'Carole'],
           notation1 : 0,
           notation2 : 0,
-          notation3 : 0
+          notation3 : 0,
+         mdp : " ",
+         // tableau : [notation1, notation2, notation3]
          },
         methods: {
           presentation1: function(){
