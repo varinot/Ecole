@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOTES CLASSES</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+  </head>
+
+<body>
+    <div id="app">
+      <h1>ATTRIBUTION DES NOTES<br>
+         Classe de
+          <!-- choix du niveau dans une liste de classes -->
+         <p>
+           <label for="niveau">Niveau :</label>
+           <select name="niveau" id="niveau">
+                <option value="CP" selected>Cours Préparatoire</option>
+                <option value="CE1">Cours Elémentaire 1</option>
+                <option value="CE2">Cours Elémentaire 2</option>
+                <option value="CM1">Cours Moyen 1</option>
+                <option value="CM2">Cours Moyen 2</option>
+           </select>
+         </p>
+       <!-- {{ niveau }} -->
+      </h1> 
+       <!-- saisie du mot de passe du directeur -->
+      <p>
+         <label for="mdp">Mot de passe du directeur</label> :
+         <input type="password" name="mdp" id="mdp" required />
+         <span id="aideMdp"></span>
+        </p>
+       
+      <p>
+          <h2>{{ presentation1() }}<br>
+               Notation : {{ notation1 }}</h2>
+            <button v-on:click="augmente1">Augmente</button>
+            <button v-on:click="diminue1">Diminue</button> 
+          </p>     
+ <!-- <classe-primaire></classe-primaire>  -->
+ <p>
+  <h2>{{ presentation2() }}<br>
+       Notation : {{ notation2 }}</h2>
+    <button v-on:click="augmente2">Augmente</button>
+    <button v-on:click="diminue2">Diminue</button> 
+  </p> 
+  <p>
+    <h2>{{ presentation3() }}<br>
+         Notation : {{ notation3 }}</h2>
+      <button v-on:click="augmente3">Augmente</button>
+      <button v-on:click="diminue3">Diminue</button> 
+    </p> 
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+<script src="main.js"></script> 
+</body>
+</html>
