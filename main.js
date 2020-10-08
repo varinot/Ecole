@@ -40,12 +40,12 @@
           diminue3: function(){
              this.notation3--;
              this.somme--; },
-      //   },
-      //   // il faut récupérer les contenus de notations en tableau
-      //    // pour effectuer le calcul de la moyenne
-      //   cpmoyenne: function(somme){
-      //      moyenne === somme/3;
-      //      return this.moyenne;
+      
+      //    il faut récupérer la validation par click du
+      //    bouton valider l'affichage des saisies de notes
+      //   
+      //      mdpOk: function(){
+      //       ;
       //   }
           
          }     
