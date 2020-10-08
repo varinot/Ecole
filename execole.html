@@ -9,9 +9,19 @@
 
 <body>
     <div id="app">
-      <h1>ATTRIBUTION DES NOTES<br>
-         Classe de
-          <!-- choix du niveau dans une liste de classes -->
+<!-- saisie du mot de passe du directeur -->
+      <p>
+         <label for="mdp">Mot de passe du directeur</label> :
+         <input type="password" name="mdp" id="mdp" required />
+         <span id="aideMdp"></span>
+         <!-- bouton de validation du mdp -->
+         <button v-on:click="mdpOk">Valider</button>
+        </p>
+         <h1>ATTRIBUTION DES NOTES<br>
+         Classe de :
+   <!-- condition d'autorisation d'utilisation -->
+  
+           <!-- choix du niveau dans une liste de classes -->
          <p>
            <label for="niveau">Niveau :</label>
            <select name="niveau" id="niveau">
@@ -24,14 +34,7 @@
          </p>
        <!-- {{ niveau }} -->
       </h1> 
-       <!-- saisie du mot de passe du directeur -->
-      <p>
-         <label for="mdp">Mot de passe du directeur</label> :
-         <input type="password" name="mdp" id="mdp" required />
-         <span id="aideMdp"></span>
-        </p>
-       
-      <p>
+     
           <h2>{{ presentation1() }}<br>
                Notation : {{ notation1 }}</h2>
             <button v-on:click="augmente1">Augmente</button>
@@ -50,6 +53,13 @@
       <button v-on:click="augmente3">Augmente</button>
       <button v-on:click="diminue3">Diminue</button> 
     </p> 
+     <!-- affichage de la moyenne -->
+     <p>
+       {{ txt }} <br>
+       {{ somme/3 }}
+       
+     </p>
+    </div>
     </div>
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
 <script src="main.js"></script> 
