@@ -37,29 +37,30 @@
        <!-- {{ niveau }} -->
       <!-- Evolution de la fonctionnalité en récupérant le niveau sélectionné en affichage de moyenne -->
       </h1> 
-               <h2>{{ presentation1() }}<br>
+     
+          <h2>{{ eleve[0] }}<br>
                Notation : {{ notation1 }}</h2>
-            <button v-on:click="augmente1">Augmente</button>
-            <button v-on:click="diminue1">Diminue</button> 
+            <button v-on:click= "notation1++, somme++">Augmente</button>
+            <button v-on:click="notation1--, somme--">Diminue</button> 
           </p>     
  <!-- <classe-primaire></classe-primaire>  -->
  <p>
-  <h2>{{ presentation2() }}<br>
+  <h2>{{ eleve[1] }}<br>
        Notation : {{ notation2 }}</h2>
-    <button v-on:click="augmente2">Augmente</button>
-    <button v-on:click="diminue2">Diminue</button> 
+       <button v-on:click= "notation2++, somme++">Augmente</button>
+       <button v-on:click="notation2--, somme--">Diminue</button> 
   </p> 
   <p>
-    <h2>{{ presentation3() }}<br>
+    <h2>{{ eleve[2] }}<br>
          Notation : {{ notation3 }}</h2>
-      <button v-on:click="augmente3">Augmente</button>
-      <button v-on:click="diminue3">Diminue</button> 
+         <button v-on:click= "notation3++, somme++">Augmente</button>
+         <button v-on:click="notation3--, somme--">Diminue</button> 
     </p> 
      <!-- affichage de la moyenne -->
      <!-- avec la récup du niveau sélectionné -->
      <p>
        {{ txt }} {{selected}}<br>
-       {{ textmoyenne() }}<br>
+       {{ txt }}<br>
        {{ somme/3 }}
        
      </p>
