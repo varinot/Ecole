@@ -1,7 +1,8 @@
     new Vue({
         el: '#app',
         data: {
-         niveau : ' ',
+         niveau : 'CE1',
+         selected: '',
           eleve : ['Daniel', 'Eric', 'Carole'],
           notation1 : 0,
           notation2 : 0,
@@ -12,6 +13,9 @@
          moyenne: 0, 
          somme: 0,
          },
+          //    optimisation du txt avec le niveau sélectionné pour 
+      //    concaténer le texte dans txt en +
+      //   
         methods: {
           presentation1: function(){
              return this.eleve[0] 
@@ -40,10 +44,11 @@
           diminue3: function(){
              this.notation3--;
              this.somme--; },
-      
-      //    il faut récupérer la validation par click du
-      //    bouton valider l'affichage des saisies de notes
-      //   
+                //    optimisation du txt avec le niveau sélectionné pour 
+      //    concaténer le texte dans txt en +
+      textmoyenne: function(){
+         return "moyenne de la classe :" + this.selected;  
+          },
       //      mdpOk: function(){
       //      return this.moyenne ;
       //   }
