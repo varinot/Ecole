@@ -38,20 +38,34 @@
       <!-- Evolution de la fonctionnalité en récupérant le niveau sélectionné en affichage de moyenne -->
       </h1> 
      
-          <h2>{{ eleve[0] }}<br>
+          <h2>{{ eleve[0].nom }}<br>
                Notation : {{ notation1 }}</h2>
-            <button v-on:click= "notation1++, somme++">Augmente</button>
-            <button v-on:click="notation1--, somme--">Diminue</button> 
-          </p>     
+
+              <!--afficher ls notes de l eleve
+
+              -->
+
+              <!--
+                moyenne de l eleve
+              -->
+
+              <!--form qui permet d ajouter un note a l eleves
+            -->
+
+
+
+
+            <!-- <button v-on:click= "notation1++, somme++">Augmente</button>
+            <button v-on:click="notation1--, somme--">Diminue</button>  -->
  <!-- <classe-primaire></classe-primaire>  -->
  <p>
-  <h2>{{ eleve[1] }}<br>
+  <h2>{{ eleve[1].nom }}<br>
        Notation : {{ notation2 }}</h2>
        <button v-on:click= "notation2++, somme++">Augmente</button>
        <button v-on:click="notation2--, somme--">Diminue</button> 
   </p> 
   <p>
-    <h2>{{ eleve[2] }}<br>
+    <h2>{{ eleve[2].nom }}<br>
          Notation : {{ notation3 }}</h2>
          <button v-on:click= "notation3++, somme++">Augmente</button>
          <button v-on:click="notation3--, somme--">Diminue</button> 

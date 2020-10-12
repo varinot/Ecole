@@ -3,7 +3,25 @@
         data: {
          niveau : 'CE1',
          selected: '',
-          eleve : ['Daniel', 'Eric', 'Carole'],
+         eleve : //tableau d eleve
+                     
+                        [//a chaque index un objets contenant nom et note d eleves 
+                                {
+                                    nom : 'Daniel',
+                                    note : [10,6,12]
+                                },
+                        
+                                {
+                                    nom : 'marc',
+                                    note : [6,9,15]
+                                },
+                        
+                                {
+                                    nom : 'antoine',
+                                    note : [14,14,17]
+                                }
+                        ]
+                    ,
           notation1 : 0,
           notation2 : 0,
           notation3 : 0,
